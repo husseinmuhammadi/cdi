@@ -1,0 +1,1 @@
+# Building a CDI 2 standalone Java application
