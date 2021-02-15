@@ -12,6 +12,7 @@
     <modules>
         <module>cdi-glassfish</module>
         <module>standalone-weld</module>
+        <module>weld-j2se-standard</module>
     </modules>
 
     <properties>
