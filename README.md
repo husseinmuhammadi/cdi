@@ -60,7 +60,19 @@ So, once we have inited the SeContainer we fire a synchronous event that trigger
 
 
 
+## WeldContainer and SeContainer
 
+What is the difference between using:
+
+```
+WeldContainer se = new Weld().initialize();
+```
+
+or
+
+```
+SeContainer se = SeContainerInitializer.newInstance().initialize();
+```
 
 *Context and Dependency Injection* (CDI) is a specification. That means it defines an API only and does not provide an implementation. That's why you have to include an implementation such as *Weld* in order to actually use the API. The ***WeldContainer*** class is vendor-specific whereas the ***SeContainer*** interface is part of the specification. The former implements the latter.
 
