@@ -12,7 +12,7 @@
     <modules>
         <module>cdi-glassfish</module>
         <module>weld-java-console</module>
-        <module>weld-j2se-standard</module>
+        <module>cdi-se-container</module>
     </modules>
 
     <properties>
