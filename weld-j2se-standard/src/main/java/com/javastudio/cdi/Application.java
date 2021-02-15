@@ -7,9 +7,9 @@ import javax.enterprise.inject.se.SeContainer;
 import javax.enterprise.inject.se.SeContainerInitializer;
 import java.util.concurrent.ExecutionException;
 
-public class Application1 {
+public class Application {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(Application1.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(Application.class);
 
     public static void main(String[] args) {
         SeContainer container = null;
@@ -18,7 +18,7 @@ public class Application1 {
             container = containerInit.initialize();
 
             // Fire synchronous event that triggers the code in App class.
-            Application1 application = container.select(Application1.class).get();
+            Application application = container.select(Application.class).get();
 
             application.run();
         } catch (Exception e) {
@@ -30,6 +30,6 @@ public class Application1 {
     }
 
     void run() {
-        LOGGER.info("Weld standalone java application started!");
+        LOGGER.info("Cdi se container started!");
     }
 }
