@@ -41,8 +41,8 @@
 
         <dependency>
             <groupId>org.jboss.weld.se</groupId>
-            <artifactId>weld-se-shaded</artifactId>
-            <version>3.0.0.Final</version>
+            <artifactId>weld-se-core</artifactId>
+            <version>4.0.0.Final</version>
         </dependency>
     </dependencies>
 </project>
