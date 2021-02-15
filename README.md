@@ -74,7 +74,7 @@ or
 SeContainer se = SeContainerInitializer.newInstance().initialize();
 ```
 
-*Context and Dependency Injection* (CDI) is a specification. That means it defines an API only and does not provide an implementation. That's why you have to include an implementation such as *Weld* in order to actually use the API. The [WeldContainer](#) class is vendor-specific whereas the [SeContainer] interface is part of the specification. The former implements the latter.
+*Context and Dependency Injection* (CDI) is a specification. That means it defines an API only and does not provide an implementation. That's why you have to include an implementation such as *Weld* in order to actually use the API. The [WeldContainer](#) class is vendor-specific whereas the [SeContainer](#) interface is part of the specification. The former implements the latter.
 
 The [SeContainerInitializer](#) class, which is part of the API, will delegate to the implementation included with the application. So if you use *Weld* as the implementation then ultimately using [SeContainerInitializer](#) and [SeContainer](#) is the same as using [Weld](#) and [WeldContainer](#) "under the hood".
 
