@@ -1,5 +1,7 @@
 # Building a CDI 2 standalone Java application
 
+[building-a-cdi-2-standalone-java-application](http://www.mastertheboss.com/jboss-frameworks/cdi/building-a-cdi-2-standalone-java-application)
+
 In the second article about CDI 2 we will learn how to create a standalone J2SE application featuring CDI2. Let's get started!
 Using Context Dependency Injection for J2SE application is something not totally new to developers. 
 For example, before CDI 2 you could start-up the Weld CDI container using the specific classes provided by it. This needed to include at first the correct dependencies:
@@ -24,3 +26,30 @@ public static void main(String[] args) throws IOException {
     weld.shutdown();
 }
 ```
+
+Although that does work, it was needed to have a **standard way to boot your CDI containers**, once that you have available in your classpath the right dependencies. As CDI 2 is progressing quickly [JSR 365](https://jcp.org/aboutJava/communityprocess/pr/jsr365/index.html) to the version 2.0 let's see how you can bootstrap the Weld container with a J2SE project.
+
+The class we will use for this purpose is javax.enterprise.inject.se.SeContainerInitializer which is a CDI container initializer for Java SE. By using it, we will be able to create an instance of a **javax.enterprise.inject.se.SeContainer** which is your gate for accessing the container in Java SE.
+
+Let's see an HelloWorld CDI 2 example:
+
+```
+package com.mastertheboss;
+
+import javax.enterprise.inject.spi.*;
+import javax.enterprise.inject.se.*;
+
+public class CDI2Demo {
+	public static void main(String... args) {
+		SeContainerInitializer containerInit = SeContainerInitializer.newInstance();
+		SeContainer container = containerInit.initialize();
+
+		// Fire synchronous event that triggers the code in App class.
+		container.getBeanManager().fireEvent(new SimpleEvent());
+
+		container.close();
+	}
+}
+```
+
+So, once we have inited the SeContainer we fire a synchronous event that triggers the code in App class:
