@@ -82,4 +82,6 @@ From a purist's perspective it's best to rely only on the specification's interf
 
 In other words, whether you use [Weld](#) / [WeldContainer](#) or [SeContainerInitialializer](#) / [SeContainer](#) depends on the (current and future) requirements of your application. When in doubt, program to the interface.
 
+Note this separation between the API and implementation is not unique to CDI. Pretty much the entire *Java EE*—or as it's now known, *Jakarta EE*—API works this way. An example would be the *Java Persistence API* (JPA) and *Hibernate* or *EclipseLink* (two implementations). For an example within *Java SE* there's the *Java Database Connectivity* (JDBC) API and the various implementations (i.e. drivers).
+
 
