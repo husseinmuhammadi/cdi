@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertTimeout;
 
 class ProductServiceTest {
 
-    ProductService productService = Mockito.mock(ProductService.class);
+    private ProductService productService = Mockito.mock(ProductService.class);
 
     @BeforeEach
     void setUp() {
