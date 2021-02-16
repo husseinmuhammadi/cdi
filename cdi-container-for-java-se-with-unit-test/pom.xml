@@ -11,7 +11,7 @@
         <relativePath>../parent</relativePath>
     </parent>
 
-    <artifactId>cdi-se-container-with-unit-test</artifactId>
+    <artifactId>cdi-container-for-java-se-with-unit-test</artifactId>
 
     <build>
         <finalName>weld</finalName>
