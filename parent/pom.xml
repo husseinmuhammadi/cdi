@@ -12,7 +12,8 @@
     <modules>
 <!--        <module>../cdi-glassfish</module>-->
 <!--        <module>../weld-java-console</module>-->
-        <module>../cdi-se-container</module>
+<!--        <module>../cdi-se-container</module>-->
+        <module>../cdi-se-container-with-unit-test</module>
     </modules>
 
     <properties>
