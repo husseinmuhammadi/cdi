@@ -8,6 +8,7 @@
         <groupId>com.javastudio.cdi</groupId>
         <artifactId>cdi-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../parent</relativePath>
     </parent>
 
     <artifactId>cdi-se-container</artifactId>
@@ -42,7 +43,7 @@
         <dependency>
             <groupId>org.jboss.weld.se</groupId>
             <artifactId>weld-se-core</artifactId>
-            <version>4.0.0.Final</version>
+            <version>3.0.0.Final</version>
         </dependency>
     </dependencies>
 </project>
