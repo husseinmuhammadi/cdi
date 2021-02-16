@@ -11,10 +11,10 @@
         <relativePath>../parent</relativePath>
     </parent>
 
-    <artifactId>cdi-se-container</artifactId>
+    <artifactId>cdi-container-for-java-se</artifactId>
 
     <build>
-        <finalName>weld</finalName>
+        <finalName>demo</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
