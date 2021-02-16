@@ -14,7 +14,7 @@
     <artifactId>cdi-container-for-java-se-with-unit-test</artifactId>
 
     <build>
-        <finalName>weld</finalName>
+        <finalName>demo</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
