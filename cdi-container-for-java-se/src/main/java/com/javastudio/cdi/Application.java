@@ -1,15 +1,20 @@
 package com.javastudio.cdi;
 
+import com.javastudio.cdi.api.ProductService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.enterprise.inject.se.SeContainer;
 import javax.enterprise.inject.se.SeContainerInitializer;
+import javax.inject.Inject;
 import java.util.concurrent.ExecutionException;
 
 public class Application {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Application.class);
+
+    @Inject
+    private ProductService productService;
 
     public static void main(String[] args) {
         SeContainer container = null;
@@ -21,6 +26,7 @@ public class Application {
             Application application = container.select(Application.class).get();
 
             application.run();
+
         } catch (Exception e) {
             LOGGER.error(e.getMessage(), e);
         } finally {
@@ -31,5 +37,6 @@ public class Application {
 
     void run() {
         LOGGER.info("Cdi se container started!");
+        productService.ok();
     }
 }
