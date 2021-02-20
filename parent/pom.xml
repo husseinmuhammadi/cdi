@@ -11,9 +11,9 @@
 
     <modules>
         <!--        <module>../cdi-glassfish</module>-->
-        <!--        <module>../weld-java-console</module>-->
-<!--                <module>../cdi-container-for-java-se</module>-->
-        <module>../cdi-container-for-java-se-with-unit-test</module>
+        <module>../weld-java-console</module>
+        <!--                <module>../cdi-container-for-java-se</module>-->
+<!--        <module>../cdi-container-for-java-se-with-unit-test</module>-->
     </modules>
 
     <properties>
