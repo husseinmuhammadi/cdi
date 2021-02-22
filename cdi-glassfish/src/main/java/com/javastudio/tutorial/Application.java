@@ -19,8 +19,4 @@ public class Application {
     public static void main(String[] args) {
         LOGGER.info("Hello world!");
     }
-
-    public void demo() {
-        productService.finalAll();
-    }
 }
