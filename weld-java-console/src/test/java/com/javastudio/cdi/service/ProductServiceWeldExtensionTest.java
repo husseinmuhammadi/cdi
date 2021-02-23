@@ -17,7 +17,7 @@ import javax.inject.Inject;
  * 3. Test class is injected automatically.
  */
 @ExtendWith(WeldJunit5Extension.class)
-class ProductService2Test {
+public class ProductServiceWeldExtensionTest {
 
     @Inject
     ProductService productService;

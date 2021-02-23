@@ -15,8 +15,7 @@ import javax.inject.Inject;
  * 3. Test class is injected automatically.
  */
 @EnableWeld
-class ProductServiceTest {
-
+public class ProductServiceWithDefaultDiscoveryTest {
 
 //    @WeldSetup
 //    public WeldInitiator weld = WeldInitiator.from(ProductService.class, ProductServiceImpl.class)
@@ -33,5 +32,4 @@ class ProductServiceTest {
     void test() {
         productService.ok();
     }
-
 }
